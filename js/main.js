@@ -1,3 +1,6 @@
+
+
+
 // header
 // const header = document.querySelector('.header');
 // const main__timetable = document.querySelector('.main__timetable');
@@ -39,6 +42,16 @@ function eyeball(){
     });
 };
 
+//menu mobile
+const iconMenu = document.querySelector('.menu__icon');
+if(iconMenu) {
+	const menu = document.querySelector('.menu');
+	iconMenu.addEventListener("click", function(e) {
+		iconMenu.classList.toggle('active-menu');
+		menu.classList.toggle('active-menu');
+	});
+}
+
 // contacts page
 jQuery(document).ready(function() {
 	// /* How to Handle Hashtags */
@@ -68,48 +81,18 @@ jQuery(document).ready(function() {
 
 // anchor without link change
 
-$(function(){
-    $(".info__nav, .info__link, logo").on("click","a", function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
+// $(function(){
+//     $(".info__nav, .info__link, logo").on("click","a", function (event) {
+// 		//отменяем стандартную обработку нажатия по ссылке
+// 		event.preventDefault();
 
-		//забираем идентификатор бока с атрибута href
-		var id  = $(this).attr('href'),
+// 		//забираем идентификатор бока с атрибута href
+// 		var id  = $(this).attr('href'),
 
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
-			top = $(id).offset().top;
+// 		//узнаем высоту от начала страницы до блока на который ссылается якорь
+// 			top = $(id).offset().top;
 		
-		//анимируем переход на расстояние - top за 1500 мс
-		$('body,html').animate({scrollTop: top}, 1000);
-	});
-});
-
-
-// menu-mobile
-const navBtn = document.querySelector('.menu-icon-wrapper');
-const mobileNav = document.querySelector('.header__inner');
-const menuIcon = document.querySelector('.menu-icon');
-
-
-navBtn.onclick = function(){
-	mobileNav.classList.toggle('menu-mobile');
-    menuIcon.classList.toggle('menu-icon-active');
-};
-
-// menuInfo.onclick = function(){
-// 	mobileNav.classList.remove('menu-mobile');
-//     menuIcon.classList.toggle('menu-icon-active');
-// };
-// menuChar.onclick = function(){
-// 	mobileNav.classList.remove('menu-mobile');
-//     menuIcon.classList.toggle('menu-icon-active');
-// };
-// menuPrice.onclick = function(){
-// 	mobileNav.classList.remove('menu-mobile');
-//     menuIcon.classList.toggle('menu-icon-active');
-// };
-
-
-// document.querySelector('.menu-icon-wrapper').onclick = function(){
-//     document.querySelector('.menu-icon').classList.toggle('menu-icon-active');
-// };
+// 		//анимируем переход на расстояние - top за 1500 мс
+// 		$('body,html').animate({scrollTop: top}, 1000);
+// 	});
+// });
