@@ -43,6 +43,10 @@ body {
     background-color: #fff;
 }
 
+body.lock {
+    overflow: hidden;
+}
+
 html, body {
     height: 100%;
 }
@@ -325,6 +329,10 @@ html, body {
     text-decoration: underline;
 }
 
+.hide__menu {
+    display: none;
+}
+
 .info__nav{
     max-width: 30%;
     flex-wrap: wrap;
@@ -413,6 +421,7 @@ html, body {
 .menu__icon {
     display: none;
 }
+
 
 @media (max-width: 1220px) {
     .footer {
@@ -528,6 +537,20 @@ html, body {
         transform: scale(1) translate(0px, -50%);
     }
 
+    .menu__icon.active-menu span {
+        transform: scale(0) translate(0px, -50%);
+    }
+
+    .menu__icon.active-menu::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    .menu__icon.active-menu::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+
     .menu {
         position: fixed;
         top: 0;
@@ -566,6 +589,91 @@ html, body {
         font-size: 24px;
     }
 
+    .teacher__img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .teacher__name {
+        font-size: 24px;
+    }
+
+    .info__inner h5,
+    .info section .contact,
+    .info__inner span {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .info__inner li,
+    .info__inner p {
+        font-size: 15px;
+    }
+
+    .info__nav {
+        max-width: 25%;
+    }
+
+    .info__link {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 685px) {
+    .info__inner li,
+    .info__inner p {
+        font-size: 13px;
+    }
+
+    .info__link {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 685px) {
+    .info__nav {
+        display: none;
+        overflow: hidden;
+    }
+
+    .header {
+        position: fixed;
+        z-index: 999;
+    }
+
+    .info__teacher {
+        padding-top: 100px;
+    }
+
+    .main {
+        padding-top: 100px;
+    }
+
+    .hide__menu {
+        display: block;
+    }
+
+    .content {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .sub__list {
+        background: inherit;
+        padding-top: 15px;
+    }
+
+    .sub__list li {
+        margin-bottom: 20px;
+    }
+
+    .sub__list li:last-child {
+        margin-bottom: 0;
+    }
+
+    .info__link {
+        color: #fff;
+    }
 }
 
 @media (max-width: 530px) {
@@ -598,6 +706,38 @@ html, body {
     .prog-header,
     .timetable-header {
         margin-top: 0;
+    }
+}
+
+@media (max-width: 457px) {
+    .teacher__img {
+        max-width: 250px;
+        max-height: 250px;
+    }
+    
+    .teacher__name {
+        font-size: 20px;
+    }
+
+    .info__inner h5,
+    .info section .contact,
+    .info__inner span {
+        font-size: 12px;
+    }
+
+    .info__inner li,
+    .info__inner p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 389px) {
+    .information {
+        flex-wrap: wrap;
+    }
+
+    .teacher__img {
+        display: none;
     }
 }
 
