@@ -14,7 +14,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__inner">
+            <div class="header__inner wrapper">
                 <a class="logo" href="index.html"><h1 class="logo__text">ИВТ-1</h1></a>
                 <nav class="menu">
                     <ul class="menu__list">
@@ -22,21 +22,28 @@
                             <a class="menu__link" href="index.html" >Главная</a>                         
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="contacts.html" id="char-btn">Контакты</a>                         
+                            <a class="menu__link" href="contacts.html">Контакты</a>                         
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="https://www.donnu.ru/" target="_blank">Сайт универа</a>                         
+                            <a class="menu__link" href="http://donnu.ru/" target="_blank">Сайт универа</a>                         
                         </li>
                         <li class="menu__item">
                             <a class="menu__link" href="https://vk.com/fcl_phys_kkt" target="_blank">Группа кафедры</a>                         
                         </li>
+                        <li class="menu__item hide__menu">
+                            <a class="menu__link open-sub__list" href="javascript:void(0);">Преподаватели</a>      
+                            <ul class="sub__list none">
+                                <li><a href="#curator" class="info__link active">Куратор</a></li>
+                                <li><a href="#program-prakt" class="info__link">Программирование проработчик</a></li>
+                                <li><a href="#program" class="info__link">Программирование лектор</a></li>
+                                <li><a href="#komp-graf-evm" class="info__link">Компьютерная графика и ЭВМ</a></li>
+                            </ul>                   
+                        </li>
                     </ul>
                 </nav>
-                <button type="button" class="nav__toggle">
-                    <div class="menu-icon-wrapper">
-                        <div class="menu-icon"></div>
-                    </div>
-                </button>
+                <div class="menu__icon">
+                    <span></span>
+                </div>
             </div>
         </div>
     </header>
@@ -58,8 +65,8 @@
                 <div class="information">
                     <img src="./image/contact-main/curator.jpg" alt="Фото" class="teacher__img">
                     <div class="info__inner">
-                        <h1>Гукай Алексей Евгеньевич<img src = "./image/contact-main/help.png" title = "Информация была взята с сайта Донецкого Национального Университета" class="help"></h1>
-                        <p><a a href="https://vk.com/exxxar" target="_blank" class="contact">Связаться</a></p>
+                        <h1 class="teacher__name">Гукай Алексей Евгеньевич<img src = "./image/contact-main/help.png" title = "Информация была взята с сайта Донецкого Национального Университета" class="help"></h1>
+                        <p><a href="https://vk.com/exxxar" target="_blank" class="contact">Связаться</a></p>
                         <h5>Должность: </h5>
                         <p>старший преподаватель кафедры компьютерных технологий</p>
                         <h5>Перечень преподаваемых дисциплин: </h5>
@@ -100,7 +107,7 @@
                 <div class="information">
                     <img src="./image/contact-main/program-prakt.jpg" alt="Фото" class="teacher__img">
                     <div class="info__inner">
-                        <h1>Бодряга Вероника Евгеньевна<img src = "./image/contact-main/help.png" title = "Информация была взята с сайта Донецкого Национального Университета" class="help"></h1>
+                        <h1 class="teacher__name">Бодряга Вероника Евгеньевна<img src = "./image/contact-main/help.png" title = "Информация была взята с сайта Донецкого Национального Университета" class="help"></h1>
                         <p><a a href="https://vk.com/veronika0102" target="_blank" class="contact">Связаться</a></p>
                         <h5>Должность: </h5>
                         <p>старший преподаватель кафедры компьютерных технологий</p>
@@ -140,12 +147,11 @@
                 </div>
             </section>
 
-            <!-- About Page -->
             <section class="content hide" id="program">
                 <div class="information">
                     <img src="./image/contact-main/program.png" alt="Фото" class="teacher__img">
                     <div class="info__inner">
-                        <h1>Бондаренко Виталий Иванович<img src = "./image/contact-main/help.png" title = "Информация была взята с сайта Донецкого Национального Университета" class="help"></h1>
+                        <h1 class="teacher__name">Бондаренко Виталий Иванович<img src = "./image/contact-main/help.png" title = "Информация была взята с сайта Донецкого Национального Университета" class="help"></h1>
                         <p><a a href="https://vk.com/vibondarenko" target="_blank" class="contact">Связаться</a></p>
                         <h5>Должность: </h5>
                         <p>доцент кафедры компьютерных технологий</p>
@@ -205,12 +211,11 @@
                 </div>
             </section>
 
-            <!-- Contact Page -->
             <section class="content hide" id="komp-graf-evm">
                 <div class="information">
                     <img src="./image/contact-main/komp-graf-evm.jpg" alt="Фото" class="teacher__img">
                     <div class="info__inner">
-                        <h1>Котенко Владислав Николаевич<img src = "./image/contact-main/help.png" title = "Информация была взята с сайта Донецкого Национального Университета" class="help"></h1>
+                        <h1 class="teacher__name">Котенко Владислав Николаевич<img src = "./image/contact-main/help.png" title = "Информация была взята с сайта Донецкого Национального Университета" class="help"></h1>
                         <p><a a href="https://vk.com/binturong1967" target="_blank" class="contact">Связаться</a></p>
                         <h5>Должность: </h5>
                         <p>старший преподаватель кафедры компьютерных технологий</p>
